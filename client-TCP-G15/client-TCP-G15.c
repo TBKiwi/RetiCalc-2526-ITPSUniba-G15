@@ -32,10 +32,8 @@ int main() {
 
     connect(sock, (struct sockaddr*)&server, sizeof(server));
 
-    
     send(sock, "Hello", 5, 0);
 
-    
     char buffer[BUF_SIZE];
     printf("Inserisci una stringa: ");
     fgets(buffer, BUF_SIZE, stdin);
@@ -43,7 +41,6 @@ int main() {
 
     send(sock, buffer, strlen(buffer), 0);
 
-    
     int n = recv(sock, buffer, BUF_SIZE, 0);
     buffer[n] = '\0';
 
@@ -56,3 +53,4 @@ int main() {
 #endif
     return 0;
 }
+
