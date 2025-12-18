@@ -48,11 +48,9 @@ int main() {
         printf("Ricevuti dati dal client con indirizzo: %s\n", ip);
 
         char buffer[BUF_SIZE];
-
         
         recv(client, buffer, BUF_SIZE, 0);
 
-        
         int n = recv(client, buffer, BUF_SIZE, 0);
         buffer[n] = '\0';
 
@@ -78,3 +76,4 @@ int main() {
 #endif
     return 0;
 }
+
