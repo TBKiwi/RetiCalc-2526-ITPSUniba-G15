@@ -35,7 +35,7 @@ int main() {
     bind(server, (struct sockaddr*)&addr, sizeof(addr));
     listen(server, 5);
 
-    printf("Server in ascolto sulla porta %d...\n", PORT);
+    printf("Server in ascolto sulla porta %d\n", PORT);
 
     while (1) {
         struct sockaddr_in client_addr;
@@ -76,4 +76,5 @@ int main() {
 #endif
     return 0;
 }
+
 
